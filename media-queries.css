@@ -35,6 +35,9 @@
 }
 
 @media (min-width: 768px) {
+	.continent{
+		font-size: 2rem;
+	}
 	#container {
 		padding: 0 4rem 0 4rem;
 	}
@@ -53,6 +56,9 @@
 	#main-button-div {
 		align-items: start;
 		justify-content: start;
+	}
+	#search-div input {
+		width: 20rem;
 	}
 }
 
@@ -79,9 +85,34 @@
 	}
 }
 
+/* --------- Continent-Div Breakpoints --------- */
+@media (min-width: 624px) {
+	.continent {
+		grid-column: span 2;
+	}
+}
+
+@media (min-width: 928px) {
+	.continent {
+		grid-column: span 3;
+	}
+}
+
+@media (min-width: 1472px) {
+	.continent {
+		grid-column: span 4;
+	}
+}
+
+@media (min-width: 1744px) {
+	.continent {
+		grid-column: span 5;
+	}
+}
+
 /* --------- Navigation Lists Breakpoints --------- */
 @media (max-width: 1327px) {
-	header nav ul li:nth-child(3) {
+	header nav ul li:nth-child(6) {
 		display: none;
 	}
 }
@@ -92,19 +123,19 @@
 	}
 }
 
-@media (max-width: 798px) {
-	header nav ul li:nth-child(6) {
+@media (max-width: 859px) {
+	header nav ul li:nth-child(4) {
 		display: none;
 	}
 }
 
-@media (max-width: 616px) {
-	header nav ul li:nth-child(1) {
+@media (max-width: 677px) {
+	header nav ul li:nth-child(3) {
 		display: none;
 	}
 }
 
-@media (max-width: 595px) {
+@media (max-width: 602px) {
 	header nav ul {
 		display: none;
 	}
@@ -116,6 +147,12 @@
 		transform: scale(1.2);
 	}
 	.button:active {
+		transform: scale(0.95);
+	}
+	.card:hover {
+		transform: scale(1.2);
+	}
+	.card:active {
 		transform: scale(0.95);
 	}
 	header nav ul li a:hover {
