@@ -2,18 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>World Currencies</title>
-	<link href="https://fonts.googleapis.com" rel="preconnect">
-	<link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-	      rel="stylesheet">
-	<link href="style.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet"
+	      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
+	<link rel="stylesheet" href="styles.css" >
+	<link rel="stylesheet" href="media-queries.css">
 </head>
 <body>
 	<div id="container">
-		<div id="first-page">
-			<div id="navigation-div">
+		<div id="first-section">
+			<header>
 				<nav>
 					<h2 id="logo">World <span>Currencies</span></h2>
 					<ul>
@@ -24,29 +25,29 @@
 						<li><a href="#">North America</a></li>
 						<li><a href="#">South America</a></li>
 					</ul>
-					<button class="button" id="navigation-button">Converter</button>
+					<button id="nav-button" class="button">Converter</button>
 				</nav>
-			</div>
-			<div id="content-div">
-				<div id="heading-div">
+			</header>
+			<main>
+				<div id="title-div">
 					<h1>Currencies,</h1>
 					<h2>All In One Place</h2>
 				</div>
 				<div id="description-div">
 					<p>
-						Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-						Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-						when an unknown printer took a galley of type and
+						Euros. Dollars. Pounds. Want to know what each country's currency looks like?
+						Well, let's get started!
 					</p>
 				</div>
-				<div id="button-div">
-					<button class="button" id="explore-button">Explore</button>
+				<div id="main-button-div">
+					<button id="main-button" class="button">Explore</button>
 				</div>
-				<div id="picture-div">
-					<img alt="Map of the world" src="world_map_picture.PNG">
-				</div>
+			</main>
+			<div id="picture-div">
+				<img id="main-picture" src="world_map_picture.PNG" alt="World map">
 			</div>
 		</div>
+		<div id="second-section"></div>
 	</div>
 </body>
 </html>
