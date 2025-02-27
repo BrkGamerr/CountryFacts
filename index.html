@@ -3,279 +3,484 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>World Currencies</title>
+	<title>Country Facts</title>
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet"
 	      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
-	<link rel="stylesheet" href="styles.css" >
+	<link rel="stylesheet" href="styles.css">
 	<link rel="stylesheet" href="media-queries.css">
 </head>
 <body>
-	<div id="container">
-		<div id="first-section">
-			<header>
-				<nav>
-					<h2 id="logo">World <span>Currencies</span></h2>
-					<ul>
-						<li><a href="#europe">Europe</a></li>
-						<li><a href="#north-america">North America</a></li>
-						<li><a href="#asia">Asia</a></li>
-						<li><a href="#south-america">South America</a></li>
-						<li><a href="#africa">Africa</a></li>
-						<li><a href="#oceania">Oceania</a></li>
-					</ul>
-					<button id="nav-button" class="button">Converter</button>
-				</nav>
-			</header>
-			<main>
-				<div id="title-div">
-					<h1>Currencies,</h1>
-					<h2>All In One Place</h2>
-				</div>
-				<div id="description-div">
-					<p>
-						Euros. Dollars. Pounds. Want to know what each country's currency looks like?
-						Well, let's get started!
-					</p>
-				</div>
-				<div id="main-button-div">
-					<button id="main-button" class="button"><a href="#search-div">Explore</a></button>
-				</div>
-			</main>
-			<div id="picture-div">
-				<img id="main-picture" src="world_map_picture.PNG" alt="World map">
+<section id="hero-section">
+	<header>
+		<div id="header-div">
+			<h2 id="logo">Country <span>Facts</span></h2>
+			<nav id="header-nav">
+				<ul id="header-ul">
+					<li><a href="#europe">Europe</a></li>
+					<li><a href="#north-america">North America</a></li>
+					<li><a href="#asia">Asia</a></li>
+					<li><a href="#south-america">South America</a></li>
+					<li><a href="#africa">Africa</a></li>
+					<li><a href="#oceania">Oceania</a></li>
+				</ul>
+			</nav>
+			<button id="header-button" class="button">Random</button>
+		</div>
+	</header>
+	<div id="hero-content">
+		<div id="hero-content-left">
+			<div id="title-div">
+				<h1 id="title">Country Facts, <br><span>All In One Place</span></h1>
+			</div>
+			<div id="description-div">
+				<p id="description">
+					Want to learn a few quick facts about some countries?
+					It's easy, just click on the button below!
+				</p>
+			</div>
+			<div id="hero-button-div">
+				<button id="hero-button" class="button">Explore</button>
 			</div>
 		</div>
-		<div id="second-section">
-			<div id="search-div">
-				<label for="search-input"></label>
-				<input id="search-input" type="text" placeholder="Search...">
-			</div>
-			<div id="cards-div">
-				<div id="europe" class="continent">
-					<h2>Europe</h2>
-				</div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div id="north-america" class="continent">
-					<h2>North America</h2>
-				</div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div id="asia" class="continent">
-					<h2>Asia</h2>
-				</div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div id="south-america" class="continent">
-					<h2>South America</h2>
-				</div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div id="africa" class="continent">
-					<h2>Africa</h2>
-				</div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div id="oceania" class="continent">
-					<h2>Oceania</h2>
-				</div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
-				<div class="card"></div>
+		<div id="hero-content-right">
+			<div id="picture-div">
+				<img id="hero-picture" src="world_map_picture.PNG" alt="World Map">
 			</div>
 		</div>
 	</div>
+</section>
+<section id="content-section">
+	<div id="search-div">
+		<label for="search-input"></label>
+		<input id="search-input" type="text" placeholder="Search...">
+	</div>
+	<div id="cards-div">
+		<div id="europe" class="continent">
+			<h2>Europe</h2>
+		</div>
+		<div class="card">
+			<img src="flags/albania.png" alt="Flag of Albania">
+			<h2>Albania</h2>
+		</div>
+		<div class="card">
+			<img src="flags/andorra.png" alt="Flag of Andorra">
+			<h2>Andorra</h2>
+		</div>
+		<div class="card">
+			<img src="flags/austria.png" alt="Flag of Austria">
+			<h2>Austria</h2>
+		</div>
+		<div class="card">
+			<img src="flags/belarus.png" alt="Flag of Belarus">
+			<h2>Belarus</h2>
+		</div>
+		<div class="card">
+			<img src="flags/belgium.png" alt="Flag of Belgium">
+			<h2>Belgium</h2>
+		</div>
+		<div class="card">
+			<img src="flags/bosnia_and_herzegovina.png" alt="Flag of Bosnia and Herzegovina">
+			<h2 class="small-font">Bosnia and Herzegovina</h2>
+		</div>
+		<div class="card">
+			<img src="flags/bulgaria.png" alt="Flag of Bulgaria">
+			<h2>Bulgaria</h2>
+		</div>
+		<div class="card">
+			<img src="flags/croatia.png" alt="Flag of Croatia">
+			<h2>Croatia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/cyprus.png" alt="Flag of Cyprus">
+			<h2>Cyprus</h2>
+		</div>
+		<div class="card">
+			<img src="flags/czech_republic.png" alt="Flag of Czech Republic">
+			<h2>Czech Republic</h2>
+		</div>
+		<div class="card">
+			<img src="flags/denmark.png" alt="Flag of Denmark">
+			<h2>Denmark</h2>
+		</div>
+		<div class="card">
+			<img src="flags/estonia.png" alt="Flag of Estonia">
+			<h2>Estonia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/finland.png" alt="Flag of Finland">
+			<h2>Finland</h2>
+		</div>
+		<div class="card">
+			<img src="flags/france.png" alt="Flag of France">
+			<h2>France</h2>
+		</div>
+		<div class="card">
+			<img src="flags/germany.png" alt="Flag of Germany">
+			<h2>Germany</h2>
+		</div>
+		<div class="card">
+			<img src="flags/greece.png" alt="Flag of Greece">
+			<h2>Greece</h2>
+		</div>
+		<div class="card">
+			<img src="flags/hungary.png" alt="Flag of Hungary">
+			<h2>Hungary</h2>
+		</div>
+		<div class="card">
+			<img src="flags/iceland.png" alt="Flag of Iceland">
+			<h2>Iceland</h2>
+		</div>
+		<div class="card">
+			<img src="flags/ireland.png" alt="Flag of Ireland">
+			<h2>Ireland</h2>
+		</div>
+		<div class="card">
+			<img src="flags/italy.png" alt="Flag of Italy">
+			<h2>Italy</h2>
+		</div>
+		<div class="card">
+			<img src="flags/latvia.png" alt="Flag of Latvia">
+			<h2>Latvia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/liechtenstein.png" alt="Flag of Liechtenstein">
+			<h2>Liechtenstein</h2>
+		</div>
+		<div class="card">
+			<img src="flags/lithuania.png" alt="Flag of Lithuania">
+			<h2>Lithuania</h2>
+		</div>
+		<div class="card">
+			<img src="flags/luxembourg.png" alt="Flag of Luxembourg">
+			<h2>Luxembourg</h2>
+		</div>
+		<div class="card">
+			<img src="flags/malta.png" alt="Flag of Malta">
+			<h2>Malta</h2>
+		</div>
+		<div class="card">
+			<img src="flags/moldova.png" alt="Flag of Moldova">
+			<h2>Moldova</h2>
+		</div>
+		<div class="card">
+			<img src="flags/monaco.png" alt="Flag of Monaco">
+			<h2>Monaco</h2>
+		</div>
+		<div class="card">
+			<img src="flags/montenegro.png" alt="Flag of Montenegro">
+			<h2>Montenegro</h2>
+		</div>
+		<div class="card">
+			<img src="flags/netherlands.png" alt="Flag of Netherlands">
+			<h2>Netherlands</h2>
+		</div>
+		<div class="card">
+			<img src="flags/north_macedonia.png" alt="Flag of North Macedonia">
+			<h2>North Macedonia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/norway.png" alt="Flag of Norway">
+			<h2>Norway</h2>
+		</div>
+		<div class="card">
+			<img src="flags/poland.png" alt="Flag of Poland">
+			<h2>Poland</h2>
+		</div>
+		<div class="card">
+			<img src="flags/portugal.png" alt="Flag of Portugal">
+			<h2>Portugal</h2>
+		</div>
+		<div class="card">
+			<img src="flags/romania.png" alt="Flag of Romania">
+			<h2>Romania</h2>
+		</div>
+		<div class="card">
+			<img src="flags/russia.png" alt="Flag of Russia">
+			<h2>Russia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/san_marino.png" alt="Flag of San Marino">
+			<h2>San Marino</h2>
+		</div>
+		<div class="card">
+			<img src="flags/serbia.png" alt="Flag of Serbia">
+			<h2>Serbia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/slovakia.png" alt="Flag of Slovakia">
+			<h2>Slovakia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/slovenia.png" alt="Flag of Slovenia">
+			<h2>Slovenia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/spain.png" alt="Flag of Spain">
+			<h2>Spain</h2>
+		</div>
+		<div class="card">
+			<img src="flags/sweden.png" alt="Flag of Sweden">
+			<h2>Sweden</h2>
+		</div>
+		<div class="card">
+			<img src="flags/switzerland.png" alt="Flag of Switzerland">
+			<h2>Switzerland</h2>
+		</div>
+		<div class="card">
+			<img src="flags/turkey.png" alt="Flag of Turkey">
+			<h2>Turkey</h2>
+		</div>
+		<div class="card">
+			<img src="flags/ukraine.png" alt="Flag of Ukraine">
+			<h2>Ukraine</h2>
+		</div>
+		<div class="card">
+			<img src="flags/united_kingdom.png" alt="Flag of United Kingdom">
+			<h2>United Kingdom</h2>
+		</div>
+		<div class="card">
+			<img src="flags/vatican_city.png" alt="Flag of Vatican City">
+			<h2>Vatican City</h2>
+		</div>
+		<div id="north-america" class="continent">
+			<h2>North America</h2>
+		</div>
+		<div class="card">
+			<img src="flags/antigua_and_barbuda.png" alt="Flag of Antigua and Barbuda">
+			<h2 class="small-font">Antigua and Barbuda</h2>
+		</div>
+		<div class="card">
+			<img src="flags/bahamas.png" alt="Flag of Bahamas">
+			<h2>Bahamas</h2>
+		</div>
+		<div class="card">
+			<img src="flags/barbados.png" alt="Flag of Barbados">
+			<h2>Barbados</h2>
+		</div>
+		<div class="card">
+			<img src="flags/belize.png" alt="Flag of Belize">
+			<h2>Belize</h2>
+		</div>
+		<div class="card">
+			<img src="flags/canada.png" alt="Flag of Canada">
+			<h2>Canada</h2>
+		</div>
+		<div class="card">
+			<img src="flags/costa_rica.png" alt="Flag of Costa Rica">
+			<h2>Costa Rica</h2>
+		</div>
+		<div class="card">
+			<img src="flags/cuba.png" alt="Flag of Cuba">
+			<h2>Cuba</h2>
+		</div>
+		<div class="card">
+			<img src="flags/dominica.png" alt="Flag of Dominica">
+			<h2>Dominica</h2>
+		</div>
+		<div class="card">
+			<img src="flags/dominican_republic.png" alt="Flag of Dominican Republic">
+			<h2>Dominican Republic</h2>
+		</div>
+		<div class="card">
+			<img src="flags/el_salvador.png" alt="Flag of El Salvador">
+			<h2>El Salvador</h2>
+		</div>
+		<div class="card">
+			<img src="flags/grenada.png" alt="Flag of Grenada">
+			<h2>Grenada</h2>
+		</div>
+		<div class="card">
+			<img src="flags/guatemala.png" alt="Flag of Guatemala">
+			<h2>Guatemala</h2>
+		</div>
+		<div class="card">
+			<img src="flags/haiti.png" alt="Flag of Haiti">
+			<h2>Haiti</h2>
+		</div>
+		<div class="card">
+			<img src="flags/honduras.png" alt="Flag of Honduras">
+			<h2>Honduras</h2>
+		</div>
+		<div class="card">
+			<img src="flags/jamaica.png" alt="Flag of Jamaica">
+			<h2>Jamaica</h2>
+		</div>
+		<div class="card">
+			<img src="flags/mexico.png" alt="Flag of Mexico">
+			<h2>Mexico</h2>
+		</div>
+		<div class="card">
+			<img src="flags/nicaragua.png" alt="Flag of Nicaragua">
+			<h2>Nicaragua</h2>
+		</div>
+		<div class="card">
+			<img src="flags/panama.png" alt="Flag of Panama">
+			<h2>Panama</h2>
+		</div>
+		<div class="card">
+			<img src="flags/saint_kitts_and_nevis.png" alt="Flag of Saint Kitts and Nevis">
+			<h2 class="small-font">Saint Kitts and Nevis</h2>
+		</div>
+		<div class="card">
+			<img src="flags/saint_lucia.png" alt="Flag of Saint Lucia">
+			<h2>Saint Lucia</h2>
+		</div>
+		<div class="card">
+			<img src="flags/saint_vincent_and_the_grenadines.png" alt="Flag of Saint Vincent and the Grenadines">
+			<h2 class="smaller-font">Saint Vincent and the Grenadines</h2>
+		</div>
+		<div class="card">
+			<img src="flags/trinidad_and_tobago.png" alt="Flag of Trinidad and Tobago">
+			<h2>Trinidad and Tobago</h2>
+		</div>
+		<div class="card">
+			<img src="flags/united_states.png" alt="Flag of United States">
+			<h2>United States</h2>
+		</div>
+		<div id="asia" class="continent">
+			<h2>Asia</h2>
+		</div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div id="south-america" class="continent">
+			<h2>South America</h2>
+		</div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div id="africa" class="continent">
+			<h2>Africa</h2>
+		</div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div id="oceania" class="continent">
+			<h2>Oceania</h2>
+		</div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+	</div>
+</section>
 </body>
 </html>

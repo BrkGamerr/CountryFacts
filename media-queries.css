@@ -1,142 +1,83 @@
 /* --------- Responsive Breakpoints --------- */
-@media (min-width: 360px) {
-	#nav-button {
-		font-size: 1rem;
-		padding: 0.625rem 1.375rem;
-		width: 9.375rem;
+@media (max-width: 851px) {
+	#hero-content-left {
+		text-align: center;
 	}
-	#title-div h1, #title-div h2 {
-		font-size: 3.5rem;
+	#search-div input {
+		width: 15rem;
 	}
-	#description-div p {
+}
+
+@media (max-width: 520px) {
+	h1 {
+		font-size: 5rem;
+	}
+	p {
 		font-size: 1.5rem;
 	}
 }
 
-@media (min-width: 390px) {
-	#title-div h1, #title-div h2 {
-		font-size: 3.9rem;
+@media (max-width: 434px) {
+	h1 {
+		font-size: 4rem;
+	}
+	p {
+		font-size: 1.25rem;
 	}
 }
 
-@media (min-width: 430px) {
-	#title-div h1, #title-div h2 {
-		font-size: 4.4rem;
-	}
-	#description-div p {
-		font-size: 1.75rem;
-	}
-}
-
-@media (min-width: 480px) {
-	#container {
-		padding: 0 3rem 0 3rem;
-	}
-}
-
-@media (min-width: 768px) {
-	.continent{
-		font-size: 2rem;
-	}
-	#container {
-		padding: 0 4rem 0 4rem;
-	}
-	#title-div {
-		align-items: start;
-	}
-	#title-div h1, #title-div h2 {
-		font-size: 5.6rem;
-	}
-	#description-div {
-		text-align: left;
-	}
-	#description-div p {
-		font-weight: 300;
-	}
-	#main-button-div {
-		align-items: start;
-		justify-content: start;
-	}
-	#search-div input {
-		width: 20rem;
-	}
-}
-
-@media (min-width: 810px) {
-	main {
-		margin-top: 10rem;
-		max-width: 682px;
-		height: 55vh;
-	}
-	#title-div h1, #title-div h2 {
-		font-size: 6rem;
-	}
-}
-
-@media (min-width: 1200px) {
-	#container {
-		padding: 0 12.5rem 0 12.5rem;
-	}
-}
-
-@media (min-width: 1500px) {
-	#logo {
-		width: max-content;
-	}
-}
-
-/* --------- Continent-Div Breakpoints --------- */
-@media (min-width: 624px) {
+/* --------- Continents Breakpoints --------- */
+@media (min-width: 660px) {
 	.continent {
 		grid-column: span 2;
 	}
 }
 
-@media (min-width: 928px) {
+@media (min-width: 1000px) {
 	.continent {
 		grid-column: span 3;
 	}
 }
 
-@media (min-width: 1472px) {
+@media (min-width: 1340px) {
 	.continent {
 		grid-column: span 4;
 	}
 }
 
-@media (min-width: 1744px) {
+@media (min-width: 1680px) {
 	.continent {
 		grid-column: span 5;
 	}
 }
 
-/* --------- Navigation Lists Breakpoints --------- */
-@media (max-width: 1327px) {
-	header nav ul li:nth-child(6) {
+/* --------- Navigation Links Breakpoints --------- */
+@media (max-width: 1325px) {
+	#header-ul li:nth-child(6) {
 		display: none;
 	}
 }
 
-@media (max-width: 1219px) {
-	header nav ul li:nth-child(5) {
+@media (max-width: 1136px) {
+	#header-ul li:nth-child(5) {
 		display: none;
 	}
 }
 
-@media (max-width: 859px) {
-	header nav ul li:nth-child(4) {
+@media (max-width: 994px) {
+	#header-ul li:nth-child(4) {
 		display: none;
 	}
 }
 
-@media (max-width: 677px) {
-	header nav ul li:nth-child(3) {
+@media (max-width: 777px) {
+	#header-ul li:nth-child(3) {
 		display: none;
 	}
 }
 
-@media (max-width: 602px) {
-	header nav ul {
+@media (max-width: 687px) {
+	#header-ul li * {
 		display: none;
 	}
 }
@@ -147,23 +88,26 @@
 		transform: scale(1.2);
 	}
 	.button:active {
-		transform: scale(0.95);
+		transform: scale(.95);
 	}
 	.card:hover {
 		transform: scale(1.2);
 	}
 	.card:active {
-		transform: scale(0.95);
+		transform: scale(.95);
 	}
-	header nav ul li a:hover {
+	#header-ul li a:hover {
 		color: var(--accent-color);
-		transition: 0.3s;
+		transition: .3s;
 	}
 }
 
-/* Removes the picture when screen gets smaller. */
-@media (max-width: 1199px) {
-	#picture-div {
+/* Removes the picture for smaller devices. */
+@media (max-width: 1100px) {
+	#hero-content-right {
+		display: none;
+	}
+	#hero-picture {
 		display: none;
 	}
 }
