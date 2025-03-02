@@ -1,9 +1,9 @@
 /* --------- Responsive Breakpoints --------- */
 @media (max-width: 851px) {
-	#hero-content-left {
+	.hero-content {
 		text-align: center;
 	}
-	#search-div input {
+	.search-div input {
 		width: 15rem;
 	}
 }
@@ -53,31 +53,31 @@
 
 /* --------- Navigation Links Breakpoints --------- */
 @media (max-width: 1325px) {
-	#header-ul li:nth-child(6) {
+	li:nth-child(6) {
 		display: none;
 	}
 }
 
 @media (max-width: 1136px) {
-	#header-ul li:nth-child(5) {
+	li:nth-child(5) {
 		display: none;
 	}
 }
 
 @media (max-width: 994px) {
-	#header-ul li:nth-child(4) {
+	li:nth-child(4) {
 		display: none;
 	}
 }
 
 @media (max-width: 777px) {
-	#header-ul li:nth-child(3) {
+	li:nth-child(3) {
 		display: none;
 	}
 }
 
 @media (max-width: 687px) {
-	#header-ul li * {
+	li {
 		display: none;
 	}
 }
@@ -96,7 +96,7 @@
 	.card:active {
 		transform: scale(.95);
 	}
-	#header-ul li a:hover {
+	a:hover {
 		color: var(--accent-color);
 		transition: .3s;
 	}
@@ -104,10 +104,7 @@
 
 /* Removes the picture for smaller devices. */
 @media (max-width: 1100px) {
-	#hero-content-right {
-		display: none;
-	}
-	#hero-picture {
+	.hero-picture {
 		display: none;
 	}
 }
