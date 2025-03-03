@@ -3,7 +3,7 @@
 	.hero-content {
 		text-align: center;
 	}
-	.search-div input {
+	input {
 		width: 15rem;
 	}
 }
@@ -23,31 +23,6 @@
 	}
 	p {
 		font-size: 1.25rem;
-	}
-}
-
-/* --------- Continents Breakpoints --------- */
-@media (min-width: 660px) {
-	.continent {
-		grid-column: span 2;
-	}
-}
-
-@media (min-width: 1000px) {
-	.continent {
-		grid-column: span 3;
-	}
-}
-
-@media (min-width: 1340px) {
-	.continent {
-		grid-column: span 4;
-	}
-}
-
-@media (min-width: 1680px) {
-	.continent {
-		grid-column: span 5;
 	}
 }
 
@@ -88,21 +63,21 @@
 		transform: scale(1.2);
 	}
 	.button:active {
-		transform: scale(.95);
+		transform: scale(0.95);
 	}
 	.card:hover {
 		transform: scale(1.2);
 	}
 	.card:active {
-		transform: scale(.95);
+		transform: scale(0.95);
 	}
 	a:hover {
 		color: var(--accent-color);
-		transition: .3s;
+		transition: 0.3s;
 	}
 }
 
-/* Removes the picture for smaller devices. */
+/* Removes the picture for smaller screen. */
 @media (max-width: 1100px) {
 	.hero-picture {
 		display: none;

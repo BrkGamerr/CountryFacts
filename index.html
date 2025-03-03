@@ -8,7 +8,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet"
 	      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="media-queries.css">
 	<script src="script.js" defer></script>
 </head>
@@ -41,16 +41,16 @@
 		</div>
 		<img class="hero-picture" src="world_map_picture.PNG" alt="World Map">
 	</section>
-	<section class="content-section">
+	<section>
 		<div class="search-div" id="searchDiv">
 			<label for="search-input"></label>
-			<input id="search-input" type="search" placeholder="Search..." data-search>
+			<input id="search-input" type="search" placeholder="Search..." data-search-input>
 		</div>
-		<div class="cards-div" data-country-container></div>
-		<template data-countries-template>
+		<div class="cards-div" data-cards-div></div>
+		<template data-cards-template>
 			<div class="card">
-				<img src="" alt="" data-image>
-				<h2 data-country-name></h2>
+				<img class="flag" src="" alt="" data-card-image>
+				<h3 data-card-name></h3>
 			</div>
 		</template>
 	</section>

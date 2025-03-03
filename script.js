@@ -1,17 +1,19 @@
-const heroButton = document.getElementById("exploreButton");
-const countryCardTemplate = document.querySelector("[data-countries-template]");
-const countryCardContainer = document.querySelector("[data-country-container]");
-const searchInput = document.querySelector("[data-search]")
+// --------- const Variables Declaration --------- //
+const exploreButton = document.getElementById("exploreButton");
+const searchInput = document.querySelector("[data-search-input]")
+const cardsDiv = document.querySelector("[data-cards-div]");
+const cardsTemplate = document.querySelector("[data-cards-template]");
 
+// --------- let Variables Declaration --------- //
 let countries = []
 
-heroButton.addEventListener("click", heroButtonClick)
-
-
-function heroButtonClick() {
+// --------- Functions Section --------- //
+function exploreButtonClick() {
 	document.getElementById("searchDiv").scrollIntoView({behavior: "smooth"});
 }
 
+// --------- Event Listeners Section --------- //
+exploreButton.addEventListener("click", exploreButtonClick)
 
 searchInput.addEventListener("input", e => {
 	const value = e.target.value.toLowerCase();
@@ -22,17 +24,17 @@ searchInput.addEventListener("input", e => {
 	})
 })
 
-
+// --------- Fetching Section --------- //
 fetch("data.json")
 	.then(response => response.json())
 	.then(data => {
 		countries = data.map(country => {
-			const card = countryCardTemplate.content.cloneNode(true).children[0];
-			const image = card.querySelector("[data-image]");
-			const countryName = card.querySelector("[data-country-name]");
-			image.src = `flags/${country.name}.png`;
-			countryName.textContent = country.name;
-			countryCardContainer.append(card);
+			const card = cardsTemplate.content.cloneNode(true).children[0];
+			const cardImage = card.querySelector("[data-card-image]");
+			const cardName = card.querySelector("[data-card-name]");
+			cardImage.src = `flags/${country.name}.png`;
+			cardName.textContent = country.name;
+			cardsDiv.append(card);
 			return {name: country.name, element: card}
 		})
 	})
