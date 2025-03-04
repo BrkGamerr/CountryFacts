@@ -65,10 +65,10 @@
 	.button:active {
 		transform: scale(0.95);
 	}
-	.card:hover {
-		transform: scale(1.2);
+	.flag:hover {
+		transform: scale(1.1);
 	}
-	.card:active {
+	.flag:active {
 		transform: scale(0.95);
 	}
 	a:hover {

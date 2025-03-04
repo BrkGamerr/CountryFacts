@@ -1,5 +1,7 @@
 // --------- const Variables Declaration --------- //
 const exploreButton = document.getElementById("exploreButton");
+const scrollTopButton = document.getElementById("scrollTopButton");
+
 const searchInput = document.querySelector("[data-search-input]")
 const cardsDiv = document.querySelector("[data-cards-div]");
 const cardsTemplate = document.querySelector("[data-cards-template]");
@@ -12,8 +14,13 @@ function exploreButtonClick() {
 	document.getElementById("searchDiv").scrollIntoView({behavior: "smooth"});
 }
 
+function scrollTopButtonClick() {
+	document.getElementById("heroSection").scrollIntoView({behavior: "smooth"});
+}
+
 // --------- Event Listeners Section --------- //
 exploreButton.addEventListener("click", exploreButtonClick)
+scrollTopButton.addEventListener("click", scrollTopButtonClick)
 
 searchInput.addEventListener("input", e => {
 	const value = e.target.value.toLowerCase();
