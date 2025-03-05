@@ -9,19 +9,19 @@
 }
 
 @media (max-width: 520px) {
-	h1 {
+	.hero-content h1 {
 		font-size: 5rem;
 	}
-	p {
+	.hero-content p {
 		font-size: 1.5rem;
 	}
 }
 
 @media (max-width: 434px) {
-	h1 {
+	.hero-content h1 {
 		font-size: 4rem;
 	}
-	p {
+	.hero-content p {
 		font-size: 1.25rem;
 	}
 }

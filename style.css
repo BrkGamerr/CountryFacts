@@ -2,7 +2,7 @@
 	--primary-color: #000000;
 	--secondary-color: #ffffff;
 	--accent-color: #d7af0f;
-	--background-color: #050505;
+	--modal-color: #232323;
 	--font: "Roboto";
 }
 
@@ -18,7 +18,7 @@ html {
 }
 
 body {
-	background: var(--background-color);
+	background: var(--primary-color);
 	color: var(--secondary-color);
 	font-family: var(--font), sans-serif;
 	padding: 0 10vw;
@@ -32,8 +32,8 @@ span {
 	color: var(--accent-color);
 }
 
-/* --------- General Classes Section --------- */
-.hero-section {
+/* --------- General Styling Section --------- */
+#heroSection {
 	height: 100vh;
 }
 
@@ -49,17 +49,17 @@ span {
 	width: 9.375rem;
 }
 
-.scroll-top-button {
+#scrollTopButton {
 	background-color: var(--accent-color);
 	border: none;
 	border-radius: 50%;
 	bottom: 1rem;
 	cursor: pointer;
-	height: 50px;
+	height: 3.125rem;
 	position: fixed;
 	right: 1rem;
 	transition: transform 0.2s ease;
-	width: 50px;
+	width: 3.125rem;
 }
 
 .scroll-top-icon {
@@ -67,16 +67,25 @@ span {
 	font-size: 1.5rem;
 }
 
-.button:active, .flag:active, .scroll-top-button:active {
+.button:active, .flag:active, #scrollTopButton:active {
 	transform: scale(0.80);
 }
 
-.continent {
-	border-bottom: 1px solid var(--accent-color);
-	color: var(--accent-color);
-	font-size: 1.5rem;
-	margin-top: 3rem;
-	text-align: center;
+#overlay {
+	background: rgba(0, 0, 0, 0.5);
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: 200ms ease-in-out;
+}
+
+#overlay.active {
+	opacity: 1;
+	pointer-events: all;
 }
 
 .hide {
@@ -89,7 +98,7 @@ header {
 	height: 15vh;
 }
 
-.header-div {
+.nav-div {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
@@ -114,13 +123,13 @@ a {
 	padding-top: 10vw;
 }
 
-h1 {
+.hero-content h1 {
 	font-size: 6rem;
 }
 
-p {
+.hero-content p {
 	font-size: 1.75rem;
-	max-width: 715px;
+	max-width: 44.75rem;
 }
 
 .hero-picture {
@@ -131,7 +140,7 @@ p {
 }
 
 /* --------- Search Styling Section --------- */
-.search-div {
+#searchDiv {
 	align-items: center;
 	display: flex;
 	height: 15vh;
@@ -168,10 +177,52 @@ input:focus {
 .flag {
 	border-radius: 1rem;
 	height: 9rem;
-	max-width: 300px;
+	max-width: 18.75rem;
 	object-fit: cover;
 	transition: transform 0.2s ease;
 	width: 100%;
+}
+
+/* --------- Modals Styling Section --------- */
+.modal-div {
+	background-color: var(--modal-color);
+	border-radius: 2.5rem;
+	height: 37.5rem;
+	left: 50%;
+	padding: 2rem;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	transition: 200ms ease-in-out;
+	width: 25rem;
+	z-index: 99;
+}
+
+.modal-div.active {
+	transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-title {
+	display: flex;
+	font-size: 3rem;
+	justify-content: center;
+}
+
+.modal-content-div {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.modal-content-div h3 {
+	border-bottom: 1px solid var(--accent-color);
+	color: var(--accent-color);
+}
+
+.modal-content-div p {
+	font-size: 2rem;
 }
 
 /* --------- Footer Styling Section --------- */

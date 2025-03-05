@@ -13,9 +13,9 @@
 	<script src="script.js" defer></script>
 </head>
 <body>
-	<section class="hero-section" id="heroSection">
+	<section id="heroSection">
 		<header>
-			<div class="header-div">
+			<div class="nav-div">
 				<h2>Country <span>Facts</span></h2>
 				<nav>
 					<ul>
@@ -42,7 +42,7 @@
 		<img class="hero-picture" src="world_map_picture.PNG" alt="World Map">
 	</section>
 	<section class="flags-section">
-		<div class="search-div" id="searchDiv">
+		<div id="searchDiv">
 			<label for="search-input"></label>
 			<input id="search-input" type="search" placeholder="Search..." data-search-input>
 		</div>
@@ -51,20 +51,26 @@
 			<div>
 				<img class="flag" src="" alt="" data-card-image>
 				<h3 data-card-name></h3>
+				<div class="modal-div">
+					<h2 class="modal-title" data-card-modal-title></h2>
+					<div class="modal-content-div">
+						<h3>capital</h3>
+						<p data-card-modal-capital></p>
+						<h3>language</h3>
+						<p data-card-modal-language></p>
+						<h3>population</h3>
+						<p data-card-modal-population></p>
+						<h3>area</h3>
+						<p data-card-modal-area></p>
+						<h3>currency</h3>
+						<p data-card-modal-currency></p>
+					</div>
+				</div>
 			</div>
 		</template>
-		<button class="scroll-top-button" id="scrollTopButton"><span class="scroll-top-icon">&#8593;</span></button>
+		<button id="scrollTopButton"><span class="scroll-top-icon">&#8593;</span></button>
 	</section>
-	<div class="modal">
-		<button class=""></button>
-		<div class="modal-content">
-			<h1></h1>
-			<div class="modal-facts">
-				<h2></h2>
-				<p></p>
-			</div>
-		</div>
-	</div>
+	<div id="overlay"></div>
 	<footer></footer>
 </body>
 </html>
