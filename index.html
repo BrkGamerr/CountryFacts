@@ -19,15 +19,15 @@
 				<h2>Country <span>Facts</span></h2>
 				<nav>
 					<ul>
-						<li><a href="#">Europe</a></li>
-						<li><a href="#">North America</a></li>
-						<li><a href="#">Asia</a></li>
-						<li><a href="#">South America</a></li>
-						<li><a href="#">Africa</a></li>
-						<li><a href="#">Oceania</a></li>
+						<li><a id="europe" href="#search-input">Europe</a></li>
+						<li><a id="northAmerica" href="#search-input">North America</a></li>
+						<li><a id="asia" href="#search-input">Asia</a></li>
+						<li><a id="southAmerica" href="#search-input">South America</a></li>
+						<li><a id="africa" href="#search-input">Africa</a></li>
+						<li><a id="oceania" href="#search-input">Oceania</a></li>
 					</ul>
 				</nav>
-				<button class="button">Random</button>
+				<button id="randomButton" class="button">Random</button>
 			</div>
 		</header>
 		<div class="hero-content">
@@ -45,13 +45,16 @@
 		<div id="searchDiv">
 			<label for="search-input"></label>
 			<input id="search-input" type="search" placeholder="Search..." data-search-input>
+			<p class="search-description">*To sort by continent, type: <i>europe, north-america, africa...</i></p>
 		</div>
 		<div class="cards-div" data-cards-div></div>
 		<template data-cards-template>
-			<div>
-				<img class="flag" src="" alt="" data-card-image>
+			<div data-card-country-div>
+				<button class="flag-button" data-card-button data-modal-target="#modalDiv">
+					<img class="flag" src="" alt="" data-card-image>
+				</button>
 				<h3 data-card-name></h3>
-				<div class="modal-div">
+				<div id="modalDiv" class="modal-div" data-card-modal-div>
 					<h2 class="modal-title" data-card-modal-title></h2>
 					<div class="modal-content-div">
 						<h3>capital</h3>
@@ -60,7 +63,7 @@
 						<p data-card-modal-language></p>
 						<h3>population</h3>
 						<p data-card-modal-population></p>
-						<h3>area</h3>
+						<h3>area (in km2)</h3>
 						<p data-card-modal-area></p>
 						<h3>currency</h3>
 						<p data-card-modal-currency></p>

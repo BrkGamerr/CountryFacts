@@ -143,6 +143,8 @@ a {
 #searchDiv {
 	align-items: center;
 	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 	height: 15vh;
 	justify-content: center;
 }
@@ -164,6 +166,10 @@ input {
 
 input:focus {
 	outline: none;
+}
+
+.search-description {
+	color: gray;
 }
 
 /* --------- Cards Styling Section --------- */
