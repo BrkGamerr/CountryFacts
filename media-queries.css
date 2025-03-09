@@ -6,6 +6,23 @@
 	input {
 		width: 15rem;
 	}
+	.search-description {
+		font-size: 0.8rem;
+		text-align: center;
+	}
+	.modal-div {
+		height: 35rem;
+		width: 22rem;
+	}
+	.modal-title {
+		font-size: 2rem;
+	}
+	.modal-content-div h3 {
+		font-size: 1rem;
+	}
+	.modal-content-div p {
+		font-size: 1.5rem;
+	}
 }
 
 @media (max-width: 520px) {
