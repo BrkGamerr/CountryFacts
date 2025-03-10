@@ -6,7 +6,7 @@
 	--font: "Roboto";
 }
 
-/* --------- General Elements Section --------- */
+/* Elements Styling Section */
 *, *::after, *::before {
 	box-sizing: border-box;
 	margin: 0;
@@ -32,12 +32,21 @@ span {
 	color: var(--accent-color);
 }
 
-/* --------- General Styling Section --------- */
-#heroSection {
+/* General Styling */
+.hide {
+	display: none;
+}
+
+.hero-section__button:active, .card__flag:active, .scroll-top-button:active {
+	transform: scale(0.80);
+}
+
+/* --------- Hero Section Styling --------- */
+.hero-section {
 	height: 100vh;
 }
 
-.button {
+.hero-section__button {
 	background-color: var(--accent-color);
 	border: none;
 	border-radius: 1.5rem;
@@ -49,73 +58,37 @@ span {
 	width: 9.375rem;
 }
 
-#scrollTopButton {
-	background-color: var(--accent-color);
-	border: none;
-	border-radius: 50%;
-	bottom: 1rem;
-	cursor: pointer;
-	height: 3.125rem;
-	position: fixed;
-	right: 1rem;
-	transition: transform 0.2s ease;
-	width: 3.125rem;
+.hero-section__image {
+	height: 85vh;
+	left: 1065px;
+	position: absolute;
+	top: 140px;
 }
 
-.scroll-top-icon {
-	color: var(--primary-color);
-	font-size: 1.5rem;
-}
-
-.button:active, .flag:active, #scrollTopButton:active {
-	transform: scale(0.80);
-}
-
-#overlay {
-	background: rgba(0, 0, 0, 0.5);
-	bottom: 0;
-	left: 0;
-	opacity: 0;
-	pointer-events: none;
-	position: fixed;
-	right: 0;
-	top: 0;
-	transition: 200ms ease-in-out;
-}
-
-#overlay.active {
-	opacity: 1;
-	pointer-events: all;
-}
-
-.hide {
-	display: none;
-}
-
-/* --------- Header Styling Section --------- */
-header {
+/* Header Styling */
+.header {
 	display: grid;
 	height: 15vh;
 }
 
-.nav-div {
+.navigation {
 	align-items: center;
 	display: flex;
 	justify-content: space-between;
 }
 
-li {
+.navigation__list li {
 	display: inline-block;
 	font-weight: bold;
 	padding: 1vh 2vw;
 }
 
-a {
+.navigation__list a {
 	color: var(--secondary-color);
 	text-decoration: none;
 }
 
-/* --------- Hero-Content Styling Section --------- */
+/* Content Styling */
 .hero-content {
 	display: flex;
 	flex-direction: column;
@@ -123,24 +96,19 @@ a {
 	padding-top: 10vw;
 }
 
-.hero-content h1 {
+.hero-content__title {
 	font-size: 6rem;
 }
 
-.hero-content p {
+.hero-content__description {
 	font-size: 1.75rem;
 	max-width: 44.75rem;
 }
 
-.hero-picture {
-	height: 85vh;
-	left: 1065px;
-	position: absolute;
-	top: 140px;
-}
+/* --------- Flags Section Styling (Start) --------- */
 
-/* --------- Search Styling Section --------- */
-#searchDiv {
+/* Search Styling */
+.search {
 	align-items: center;
 	display: flex;
 	flex-direction: column;
@@ -149,11 +117,11 @@ a {
 	justify-content: center;
 }
 
-label {
+.search__label {
 	display: none;
 }
 
-input {
+.search__input {
 	border: none;
 	border-radius: 1.5rem;
 	cursor: pointer;
@@ -164,23 +132,23 @@ input {
 	width: 20rem;
 }
 
-input:focus {
+.search__input:focus {
 	outline: none;
 }
 
-.search-description {
+.search__description {
 	color: gray;
 }
 
-/* --------- Cards Styling Section --------- */
-.cards-div {
+/* Card Styling */
+.card {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 	gap: 1rem;
 	text-align: center;
 }
 
-.flag-button{
+.card__button{
 	background: none;
 	border: none;
 	height: 9rem;
@@ -188,7 +156,7 @@ input:focus {
 	width: 100%;
 }
 
-.flag {
+.card__flag {
 	border-radius: 1rem;
 	height: 9rem;
 	max-width: 18.75rem;
@@ -197,8 +165,8 @@ input:focus {
 	width: 100%;
 }
 
-/* --------- Modals Styling Section --------- */
-.modal-div {
+/* Modal Styling */
+.modal {
 	background-color: var(--modal-color);
 	border-radius: 2.5rem;
 	height: 41rem;
@@ -212,17 +180,17 @@ input:focus {
 	z-index: 99;
 }
 
-.modal-div.active {
+.modal--active {
 	transform: translate(-50%, -50%) scale(1);
 }
 
-.modal-title {
+.modal__title {
 	display: flex;
 	font-size: 3rem;
 	justify-content: center;
 }
 
-.modal-content-div {
+.modal__content {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -230,17 +198,52 @@ input:focus {
 	text-align: center;
 }
 
-.modal-content-div h3 {
+.modal__content h3 {
 	border-bottom: 1px solid var(--accent-color);
 	color: var(--accent-color);
 }
 
-.modal-content-div p {
+.modal__content p {
 	font-size: 2rem;
 }
 
-/* --------- Footer Styling Section --------- */
-footer {
+/* --------- Flags Section Styling (End) --------- */
+
+/* Scroll Top Button Styling */
+.scroll-top-button {
+	background-color: var(--accent-color);
+	border: none;
+	border-radius: 50%;
+	bottom: 1rem;
+	cursor: pointer;
+	font-size: 1.5rem;
+	height: 3.125rem;
+	position: fixed;
+	right: 1rem;
+	transition: transform 0.2s ease;
+	width: 3.125rem;
+}
+
+/* Overlay Styling */
+.overlay {
+	background: rgba(0, 0, 0, 0.5);
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	pointer-events: none;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: 200ms ease-in-out;
+}
+
+.overlay--active {
+	opacity: 1;
+	pointer-events: all;
+}
+
+/* Footer Styling */
+.footer {
 	border: 1px solid var(--accent-color);
 	margin: 4rem 0;
 }
