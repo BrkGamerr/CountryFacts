@@ -13,67 +13,67 @@
 	<script src="script.js" defer></script>
 </head>
 <body>
-	<section id="heroSection">
-		<header>
-			<div class="nav-div">
+	<section id="heroSection" class="hero-section">
+		<header class="header">
+			<div class="navigation">
 				<h2>Country <span>Facts</span></h2>
 				<nav>
-					<ul>
-						<li><a id="europe" href="#search-input">Europe</a></li>
-						<li><a id="northAmerica" href="#search-input">North America</a></li>
-						<li><a id="asia" href="#search-input">Asia</a></li>
-						<li><a id="southAmerica" href="#search-input">South America</a></li>
-						<li><a id="africa" href="#search-input">Africa</a></li>
-						<li><a id="oceania" href="#search-input">Oceania</a></li>
+					<ul class="navigation__list">
+						<li><a id="europe" href="#searchInput">Europe</a></li>
+						<li><a id="northAmerica" href="#searchInput">North America</a></li>
+						<li><a id="asia" href="#searchInput">Asia</a></li>
+						<li><a id="southAmerica" href="#searchInput">South America</a></li>
+						<li><a id="africa" href="#searchInput">Africa</a></li>
+						<li><a id="oceania" href="#searchInput">Oceania</a></li>
 					</ul>
 				</nav>
-				<button id="randomButton" class="button">Random</button>
+				<button id="randomButton" class="hero-section__button">Random</button>
 			</div>
 		</header>
 		<div class="hero-content">
-			<h1>Country Facts, <br><span>All In One Place</span></h1>
-			<p>
+			<h1 class="hero-content__title">Country Facts, <br><span>All In One Place</span></h1>
+			<p class="hero-content__description">
 				Want to learn a few quick facts about some countries?
 				It's easy, just click on the button below!
 			<div>
-				<button class="button" id="exploreButton">Explore</button>
+				<button id="exploreButton" class="hero-section__button">Explore</button>
 			</div>
 		</div>
-		<img class="hero-picture" src="world_map_picture.PNG" alt="World Map">
+		<img class="hero-section__image" src="world_map_picture.png" alt="World Map">
 	</section>
 	<section class="flags-section">
-		<div id="searchDiv">
-			<label for="search-input"></label>
-			<input id="search-input" type="search" placeholder="Search..." data-search-input>
-			<p class="search-description">*To sort by continent, type: <i>europe, north-america, africa...</i></p>
+		<div id="search" class="search">
+			<label for="searchInput" class="search__label"></label>
+			<input type="search" id="searchInput" class="search__input" data-search-input placeholder="Search...">
+			<p class="search__description">*To sort by continent, type: <i>europe, north-america, africa...</i></p>
 		</div>
-		<div class="cards-div" data-cards-div></div>
-		<template data-cards-template>
-			<div data-card-country-div>
-				<button class="flag-button" data-card-button data-modal-target="#modalDiv">
-					<img class="flag" src="" alt="" data-card-image>
+		<div class="card" data-card></div>
+		<template data-card-template>
+			<div>
+				<button class="card__button" data-card-button data-modal-target="#modal">
+					<img class="card__flag" data-card-image src="" alt="">
 				</button>
 				<h3 data-card-name></h3>
-				<div id="modalDiv" class="modal-div" data-card-modal-div>
-					<h2 class="modal-title" data-card-modal-title></h2>
-					<div class="modal-content-div">
+				<div id="modal" class="modal" data-modal>
+					<h2 class="modal__title" data-modal-title></h2>
+					<div class="modal__content">
 						<h3>capital</h3>
-						<p data-card-modal-capital></p>
+						<p data-modal-capital></p>
 						<h3>language</h3>
-						<p data-card-modal-language></p>
+						<p data-modal-language></p>
 						<h3>population</h3>
-						<p data-card-modal-population></p>
+						<p data-modal-population></p>
 						<h3>area (in km2)</h3>
-						<p data-card-modal-area></p>
+						<p data-modal-area></p>
 						<h3>currency</h3>
-						<p data-card-modal-currency></p>
+						<p data-modal-currency></p>
 					</div>
 				</div>
 			</div>
 		</template>
-		<button id="scrollTopButton"><span class="scroll-top-icon">&#8593;</span></button>
 	</section>
-	<div id="overlay"></div>
-	<footer></footer>
+	<button id="scrollTopButton" class="scroll-top-button">&#8593;</button>
+	<div id="overlay" class="overlay"></div>
+	<footer class="footer"></footer>
 </body>
 </html>
