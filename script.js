@@ -1,15 +1,4 @@
-// --------- const Variables Declaration --------- //
-const exploreButton = document.getElementById("exploreButton");
-const scrollTopButton = document.getElementById("scrollTopButton");
-const randomButton = document.getElementById("randomButton");
-
-const searchInput = document.querySelector("[data-search-input]");
-
-const cardsDiv = document.querySelector("[data-cards-div]");
-const cardsTemplate = document.querySelector("[data-cards-template]");
-
-const overlay = document.getElementById("overlay");
-
+// Navigation Link Variables
 const europeNavigationLink = document.getElementById("europe");
 const northAmericaNavigationLink = document.getElementById("northAmerica");
 const asiaNavigationLink = document.getElementById("asia");
@@ -17,26 +6,48 @@ const southAmericaNavigationLink = document.getElementById("southAmerica");
 const africaNavigationLink = document.getElementById("africa");
 const oceaniaNavigationLink = document.getElementById("oceania");
 
-// --------- let Variables Declaration --------- //
-let countries = [];
+// Button Variables
+const randomButton = document.getElementById("randomButton");
+const exploreButton = document.getElementById("exploreButton");
+const scrollTopButton = document.getElementById("scrollTopButton");
 
-let modalDivIds = [];
-
-let modal = {};
-
-let randomModal = {};
-
+// Search Variable
+const searchInput = document.querySelector("[data-search-input]");
 let searchInputValue = "";
 
-// --------- Functions Section --------- //
-function exploreButtonClick() {
-	document.getElementById("searchDiv").scrollIntoView({behavior: "smooth"});
+// Card Variables
+const cards = document.querySelector("[data-card]");
+const cardTemplate = document.querySelector("[data-card-template]");
+
+// Modal Variables
+let modalIDs = [];
+let clickedModal = {};
+let randomModal = {};
+
+// Overlay Variable
+const overlay = document.getElementById("overlay");
+
+// Fetching Variable
+let countries = [];
+
+// Navigation Link Function
+function navigationLinkEvents(value) {
+	searchInput.value = value;
+
+	const inputEvent = new Event('input', {
+		bubbles: true,
+		cancelable: true,
+	});
+	searchInput.dispatchEvent(inputEvent);
+
+	const changeEvent = new Event('change', {
+		bubbles: true,
+		cancelable: true,
+	});
+	searchInput.dispatchEvent(changeEvent);
 }
 
-function scrollTopButtonClick() {
-	document.getElementById("heroSection").scrollIntoView({behavior: "smooth"});
-}
-
+// Button Functions
 function randomButtonClick() {
 	if (searchInputValue.length > 0) {
 		searchInputValue = "";
@@ -45,49 +56,36 @@ function randomButtonClick() {
 			country.element.classList.remove("hide");
 		})
 	}
-	const randomIndex = Math.floor(Math.random() * modalDivIds.length);
-	const randomModalId = modalDivIds[randomIndex];
-	randomModal = document.querySelector(`#${randomModalId}`);
+	const randomIndex = Math.floor(Math.random() * modalIDs.length);
+	const randomModalID = modalIDs[randomIndex];
+	randomModal = document.querySelector(`#${randomModalID}`);
 	openModal(randomModal);
 }
-
-function openModal(modal) {
-	if (modal == null) return;
-	modal.classList.add("active");
-	overlay.classList.add("active");
+function exploreButtonClick() {
+	document.getElementById("search").scrollIntoView({behavior: "smooth"});
+}
+function scrollTopButtonClick() {
+	document.getElementById("heroSection").scrollIntoView({behavior: "smooth"});
 }
 
-function closeModal(modal) {
-	if (modal == null) return;
-	modal.classList.remove("active");
-	overlay.classList.remove("active");
-}
-
+// Search Function
 function filterByContinent(countries, key, value) {
 	return countries.filter(country => country[key] === value);
 }
 
-function navigationLinkEvents(value) {
-	searchInput.value = value;
-	
-	const inputEvent = new Event('input', {
-		bubbles: true,
-		cancelable: true,
-	});
-	searchInput.dispatchEvent(inputEvent);
-	
-	const changeEvent = new Event('change', {
-		bubbles: true,
-		cancelable: true,
-	});
-	searchInput.dispatchEvent(changeEvent);
+// Modal Functions
+function openModal(modal) {
+	if (modal == null) return;
+	modal.classList.add("modal--active");
+	overlay.classList.add("overlay--active");
+}
+function closeModal(modal) {
+	if (modal == null) return;
+	modal.classList.remove("modal--active");
+	overlay.classList.remove("overlay--active");
 }
 
-// --------- Event Listeners Section --------- //
-exploreButton.addEventListener("click", exploreButtonClick)
-scrollTopButton.addEventListener("click", scrollTopButtonClick)
-randomButton.addEventListener("click", randomButtonClick)
-
+// Navigation Link Event Listeners
 europeNavigationLink.addEventListener("click", () => {
 	navigationLinkEvents("europe");
 	searchInput.click();
@@ -113,14 +111,19 @@ oceaniaNavigationLink.addEventListener("click", () => {
 	searchInput.click();
 })
 
+// Button Event Listeners
+exploreButton.addEventListener("click", exploreButtonClick)
+scrollTopButton.addEventListener("click", scrollTopButtonClick)
+randomButton.addEventListener("click", randomButtonClick)
+
+// Search Event Listener
 searchInput.addEventListener("input", e => {
-	
 	searchInputValue = e.target.value.toLowerCase();
 
 	countries.forEach(country => {
 		const isVisible =
 			country.name.toLowerCase().includes(searchInputValue);
-		country.element.classList.toggle("hide", !isVisible)
+		country.element.classList.toggle("hide", !isVisible);
 	})
 
 	switch (searchInputValue) {
@@ -163,54 +166,59 @@ searchInput.addEventListener("input", e => {
 	}
 })
 
+// Overlay Event Listener
 overlay.addEventListener("click", () => {
 	try {
-		closeModal(modal);
+		closeModal(clickedModal);
 	} catch(SyntaxError) {
 		closeModal(randomModal);
 	} finally {
-		const modals = document.querySelectorAll("[data-card-modal-div]")
+		const modals = document.querySelectorAll("[data-modal]");
 		modals.forEach(modal => {
 			closeModal(modal);
-		});
+		})
 	}
 })
 
-// --------- Fetching Section --------- //
+// Fetching local data
 fetch("data.json")
 	.then(response => response.json())
 	.then(data => {
 		countries = data.map(country => {
-			const card = cardsTemplate.content.cloneNode(true).children[0];
-			const modalButton = card.querySelector("[data-card-button]");
+			// Variables
+			const card = cardTemplate.content.cloneNode(true).children[0];
+			const cardButton = card.querySelector("[data-card-button]");
 			const cardImage = card.querySelector("[data-card-image]");
 			const cardName = card.querySelector("[data-card-name]");
-			const modalDiv = card.querySelector("[data-card-modal-div]");
-			const modalTitle = card.querySelector("[data-card-modal-title]");
-			const modalCapital = card.querySelector("[data-card-modal-capital]");
-			const modalLanguage = card.querySelector("[data-card-modal-language]");
-			const modalPopulation = card.querySelector("[data-card-modal-population]");
-			const modalArea = card.querySelector("[data-card-modal-area]");
-			const modalCurrency = card.querySelector("[data-card-modal-currency]");
-			modalButton.setAttribute("data-modal-target", `#${(country.name).replace(/\s/g, "")}`);
-			modalDiv.classList.add(country.continent);
-			modalDiv.id = `${(country.name).replace(/\s/g, "")}`;
-			modalDivIds.push(modalDiv.id);
-			cardImage.src = `flags/${country.name}.png`;
-			cardName.textContent = country.name;
-			modalTitle.textContent = country.name;
-			modalCapital.textContent = country.capital;
-			modalLanguage.textContent = country.language;
-			modalPopulation.textContent = country.population;
-			modalArea.textContent = country.area;
-			modalCurrency.textContent = country.currency;
-			cardsDiv.append(card);
+			const modal = card.querySelector("[data-modal]");
+			const modalTitle = card.querySelector("[data-modal-title]");
+			const modalCapital = card.querySelector("[data-modal-capital]");
+			const modalLanguage = card.querySelector("[data-modal-language]");
+			const modalPopulation = card.querySelector("[data-modal-population]");
+			const modalArea = card.querySelector("[data-modal-area]");
+			const modalCurrency = card.querySelector("[data-modal-currency]");
 			
-			modalButton.addEventListener("click", () => {
-				modal = document.querySelector(modalButton.dataset.modalTarget);
-				openModal(modal);
+			// Assigning
+			cardButton.setAttribute("data-modal-target", `#${(country["name"]).replace(/\s/g, "")}`);
+			cardButton.addEventListener("click", () => {
+				clickedModal = document.querySelector(cardButton.dataset.modalTarget);
+				openModal(clickedModal);
 			})
+			cardImage.src = `flags/${country["name"]}.png`;
+			cardName.textContent = country["name"];
 			
-			return {continent: country.continent , name: country.name, element: card}
+			modal.id = `${(country["name"]).replace(/\s/g, "")}`;
+			modalIDs.push(modal.id);
+			modal.classList.add(country["continent"]);
+			modalTitle.textContent = country["name"];
+			modalCapital.textContent = country["capital"];
+			modalLanguage.textContent = country["language"];
+			modalPopulation.textContent = country["population"];
+			modalArea.textContent = country["area"];
+			modalCurrency.textContent = country["currency"];
+			
+			cards.append(card);
+			
+			return {continent: country["continent"], name: country["name"], element: card};
 		})
 	})
